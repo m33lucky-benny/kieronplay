@@ -1,24 +1,17 @@
 <header class="site-header">
-  <div class="wrapper">
-    <!-- Left side: logo + title -->
-    <a class="site-title site-logo" rel="author" href="{{ "/" | relative_url }}">
-      <span class="logo-placeholder" aria-hidden="true">KP</span>
-      <span class="site-title-text">{{ site.title | escape }}</span>
-    </a>
+  <nav class="navbar">
+    <a href="{{ '/' | relative_url }}" class="site-logo-link">
+  <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="site-logo">
+  <span class="site-title">{{ site.title }}</span>
+</a>
 
-    <!-- Right side: nav -->
-    <nav class="site-nav">
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger">
-        <span class="menu-icon" aria-label="Menu"></span>
-      </label>
-
-      <div class="trigger">
-        <a class="page-link" href="{{ "/" | relative_url }}">Home</a>
-        <a class="page-link" href="#games">Games</a>
-        <a class="page-link" href="#payment">Payment</a>
-        <a class="page-link" href="#support">Support</a>
-      </div>
-    </nav>
-  </div>
+    
+    <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/about' | relative_url }}">About</a></li>
+      <li><a href="{{ '/payment' | relative_url }}">Payment</a></li>
+      <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+    </ul>
+  </nav>
 </header>
+
