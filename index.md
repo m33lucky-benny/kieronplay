@@ -1,7 +1,26 @@
 ---
 layout: home
-title: KieronPlay - Top Up Game Credits
+title: Game Selection
 ---
+
+<div class="game-selection">
+  <div class="game-card">
+    <h3>MLBB</h3>
+    <p>Mobile Legends: Bang Bang</p>
+    <a href="/mlbb">Play Now</a>
+  </div>
+  <div class="game-card">
+    <h3>WWM</h3>
+    <p>Where Winds Meet</p>
+    <a href="/wwm">Play Now</a>
+  </div>
+  <div class="game-card">
+    <h3>MR</h3>
+    <p>Marvel Rivals</p>
+    <a href="/mr">Play Now</a>
+  </div>
+</div>
+
 
 <section id="hero">
   <h1>⚡ Instant Game Credits Top-Up</h1>
