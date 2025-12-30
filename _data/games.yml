@@ -1,0 +1,14 @@
+- title: "Marvel Rivals"
+  description: "Description of game 1"
+  url: "/games/game1"
+  image: "/assets/images/marvel-rivals.webp"
+
+- title: "Mobile Legends: Bang Bang"
+  description: "Description of game 2"
+  url: "/games/game2"
+  image: "/assets/images/mlbb-s.webp"
+
+- title: "Where Winds Meet"
+  description: "Description of game 3"
+  url: "/games/game3"
+  image: "/assets/images/where-winds-meet.jpg"
