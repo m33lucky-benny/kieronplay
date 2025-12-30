@@ -1,9 +1,14 @@
 title: KieronPlay
-description: Top up game credits instantly with PayNow (SGD)
-url: "https://kieronplay.ebiya.sg"
+description: Your gaming platform
 baseurl: ""
+url: "https://kieronplay.ebiya.sg"
+
+# Navigation
+header_pages:
+  - index.html
+  - about.md
+  - payment.md
+  - contact.md
+
+# Build settings
 theme: minima
-
-minima:
-  skin: dark
-
