@@ -3,6 +3,44 @@
 
 @import "minima";
 
+/* Navbar Styles */
+.site-header {
+  border-top: none;
+  border-bottom: 1px solid #333;
+  background-color: #1a1a1a;
+  min-height: 56px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  
+  &:hover {
+    text-decoration: none;
+    color: #4a90e2 !important;
+  }
+}
+
+.site-nav {
+  background-color: #1a1a1a;
+  
+  .page-link {
+    color: #4a90e2;
+    font-weight: 500;
+    
+    &:hover {
+      color: #357abd;
+      text-decoration: none;
+    }
+  }
+  
+  .menu-icon > svg {
+    fill: #4a90e2;
+  }
+}
+
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   padding: 1.5rem 1rem;
@@ -12,6 +50,7 @@
     margin: 0 0 0.5rem 0;
     font-size: 1.5rem;
     line-height: 1.2;
+    color: #ffffff;
   }
 
   p {
@@ -21,6 +60,7 @@
   }
 }
 
+/* Games Section */
 .games-section {
   padding: 1rem 0;
 }
@@ -89,6 +129,7 @@
   }
 }
 
+/* Responsive */
 @media (min-width: 600px) {
   .hero {
     padding: 2.5rem 1.5rem;
