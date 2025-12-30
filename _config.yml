@@ -4,8 +4,6 @@ url: "https://kieronplay.ebiya.sg"
 baseurl: ""
 theme: minima
 
-# Social links (Minima supports these)
 minima:
   skin: dark
-  social_links:
-    - { platform: instagram, user_url: "https://instagram.com/kieronplay" }
+
