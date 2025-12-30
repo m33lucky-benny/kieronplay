@@ -3,6 +3,16 @@
 
 @import "minima";
 
+/* Your custom styles below */
+.game-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 // Brand colors
 $charcoal-black: #2b2d31;
 $charcoal-dark: #1e1f22;
