@@ -2,6 +2,8 @@ title: KieronPlay
 description: Your gaming platform
 baseurl: ""
 url: "https://kieronplay.ebiya.sg"
+logo: /assets/images/logo.png
+
 
 # Navigation
 header_pages:
