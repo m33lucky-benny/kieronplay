@@ -392,3 +392,77 @@ main {
     text-align: center;
   }
 }
+
+.games-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  border-color: #4a90e2;
+}
+
+.game-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.game-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+  color: #ffffff;
+}
+
+.game-card p {
+  color: #999;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.play-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.play-button:hover {
+  background-color: #357abd;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
