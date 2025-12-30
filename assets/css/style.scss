@@ -13,140 +13,61 @@ $text-light: #e3e5e8;
 $text-muted: #949ba4;
 $border-color: #3f4147;
 
-// Override Minima background
+// Base styles
 body {
   background-color: $charcoal-black;
   color: $text-light;
-  margin: 0;
-  padding-top: 70px; // Space for sticky navbar
 }
 
-// Sticky navbar
+// Sticky header
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: $charcoal-dark;
   border-bottom: 1px solid $border-color;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-}
-
 .site-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   text-decoration: none;
-  color: $text-light;
-  
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 .logo-placeholder {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, $slate-accent, $slate-light);
+  width: 36px;
+  height: 36px;
   border-radius: 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: white;
+  background: linear-gradient(135deg, $slate-accent, $slate-light);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1;
   box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);
 }
 
-.site-title {
-  font-size: 1.3rem;
-  font-weight: 600;
+.site-title-text {
   color: $text-light;
+  font-weight: 600;
 }
 
-// Navigation
-.site-nav {
-  .trigger {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
+.site-nav .page-link {
+  color: $text-light !important;
+  font-weight: 500;
   
-  .page-link {
-    color: $text-light !important;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-    
-    &:hover {
-      color: $slate-light !important;
-    }
+  &:hover {
+    color: $slate-light !important;
   }
 }
 
-// Mobile menu
-.nav-trigger {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 4px;
-  
-  span {
-    display: block;
-    width: 24px;
-    height: 3px;
-    background: $text-light;
-    border-radius: 2px;
-    transition: all 0.3s;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: flex;
-  }
-  
-  .trigger {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: $charcoal-dark;
-    border: 1px solid $border-color;
-    border-radius: 8px;
-    padding: 1rem;
-    flex-direction: column;
-    gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  }
-  
-  .nav-trigger:checked ~ .trigger {
-    display: flex;
-  }
-  
-  .nav-trigger:checked ~ .menu-icon span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .nav-trigger:checked ~ .menu-icon span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .nav-trigger:checked ~ .menu-icon span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
+.site-nav .trigger {
+  display: flex;
+  gap: 1.25rem;
 }
 
 // Hero section
@@ -161,10 +82,6 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: $text-light;
-    
-    @media (max-width: 768px) {
-      font-size: 1.8rem;
-    }
   }
   
   .hero-subtitle {
@@ -225,12 +142,12 @@ section {
     font-size: 0.9rem;
     margin-bottom: 1rem;
   }
-}
-
-.game-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(88, 101, 242, 0.2);
-  border-color: $slate-accent;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(88, 101, 242, 0.2);
+    border-color: $slate-accent;
+  }
 }
 
 // Payment methods
@@ -411,7 +328,7 @@ section {
   }
 }
 
-// Button
+// Buttons
 .button {
   display: inline-block;
   background: $slate-accent;
@@ -421,8 +338,6 @@ section {
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s;
-  border: none;
-  cursor: pointer;
   
   &:hover {
     background: $slate-muted;
@@ -451,10 +366,101 @@ section {
   }
 }
 
+.footer-social {
+  margin-top: 1rem;
+  
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: $text-light;
+  }
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  text-decoration: none;
+  color: $text-light;
+  background: $charcoal-black;
+  transition: all 0.2s;
+  
+  &:hover {
+    background: $slate-accent;
+    border-color: $slate-accent;
+    color: white;
+  }
+  
+  .svg-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}
+
+.wechat-qr {
+  position: relative;
+  cursor: pointer;
+  
+  .qr-placeholder {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    background: $charcoal-dark;
+    border: 2px solid $slate-accent;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+  
+  &:hover .qr-placeholder {
+    display: block;
+  }
+  
+  .qr-box {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $charcoal-black;
+    border: 2px dashed $border-color;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: $text-muted;
+    text-align: center;
+  }
+}
+
+// Content wrapper
+.post-content {
+  color: $text-light;
+  
+  h2, h3, h4 {
+    color: $slate-light;
+  }
+  
+  a {
+    color: $slate-accent;
+    
+    &:hover {
+      color: $slate-light;
+    }
+  }
+}
+
 // Mobile responsive
 @media (max-width: 768px) {
-  body {
-    padding-top: 60px;
+  #hero h1 {
+    font-size: 1.8rem;
   }
   
   .game-grid,
